@@ -116,7 +116,7 @@ def complete(relation):
     for x in range(len(relation)):
         for y in range(len(relation)):
             # au moins l'un des deux doit etre 1 pour que ce soit complet
-            if relation[x][y] != 0 and relation[y][x] != 0:
+            if relation[x][y] == 0 and relation[y][x] == 0:
                 print("La relation n'est pas complete: R(", x, y, ") = 0 et R(", y, x, ") = 0")
                 return x, y
     print("La relation est complete")
@@ -171,13 +171,12 @@ def ordre_intervalle(relation):
     return False
 
 
-# on genere toute les matrices réflexives, transitives, complètes et antisymétriques possibles
+# on génère toute les matrices réflexives, transitives, complètes et antisymétriques possibles
 # on calcul la distance entre ces matrices et la relation donnée
 def transforme_ordre_total(relation):
     n = len(relation)
     nb_perm = int((n*(n-1))/2)
-    # contient toutes les combinaisons de n 0 et 1
-    perm = []
+    perm = []  # contient toutes les combinaisons de n 0 et 1
     for i in range(nb_perm + 1):
         # on cree une liste avec i fois 1 et n-1 fois 0
         liste = [1]*i + [0]*(nb_perm-i)
@@ -185,13 +184,45 @@ def transforme_ordre_total(relation):
         perm += list(set(permutations(liste)))
 
     # a chaque permutation on associe une matrice
-    max = n**2
-    for tuple in perm:
-        S = []
-        for i in range(n+1):
-            for j in range(i+1, n+1):
-                print(i, j)
+    distance_min = n**2
+    meilleurS = []
+    for tuple_perm in perm:
+        # cree une matrice de taille n x n remplie de 1
+        # on ne modifiera pas la diagonale pour conserver la réflexivité
+        distance_Kemeney = 0
+        S = [[1 for col in range(n)] for row in range(n)]
+        for i in range(n):
+            for j in range(i+1, n):
+                # on met les permutations trouvées dans la partie triangulaire supérieure de la matrice
+                cellule = tuple_perm[bijection(i, j, n-1)]
+                S[i][j] = cellule
+                # la matrice est symétrique
+                if cellule == 0: S[j][i] = 1
+                else: S[j][i] = 0
+                # On calcul la distance de Kemeney de la matrice
+                if S[i][j] == relation[i][j]: distance_Kemeney += 1
+                if S[j][i] == relation[j][i]: distance_Kemeney += 1
+        # si S est transitive et complète et
+        # si S est la meilleure matrice trouvée on la garde
+        print(distance_Kemeney)
+        affiche_matrix(S)
+        if transitive(S) and complete(S) and distance_min > distance_Kemeney:
+            distance_min = distance_Kemeney
+            meilleurS = S
+    print(meilleurS)
+    return meilleurS
 
+
+def affiche_matrix(mat):
+    for ligne in mat:
+        print(ligne)
+    print('\n')
+
+
+# fonction bijective qui associe à chaque couple d'indice un entier entre 1 et n
+# permet d'associer à chaque case de la matrice un indice des permutations
+def bijection(i, j, n):
+    return int(j - 1 + (n * (n - 1))/2 - ((n - i) * (n - i - 1))/2)
 
 
 # GERER LES AFFICHAGES
@@ -215,9 +246,8 @@ def main():
     semi_ordre(relation)
     ordre_intervalle(relation)
     """
+    transforme_ordre_total([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
 
-
-transforme_ordre_total([0, 0, 0, 0])
 
 main()
 
