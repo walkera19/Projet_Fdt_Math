@@ -83,8 +83,6 @@ def negativement_transitive(relation):
         for y in range(len(relation)):
             for z in range(len(relation)):
                 if relation[x][y] == 0 and relation[y][z] == 0 and relation[x][z] == 1:
-                    print("La relation n'est pas transitive: R(", x, y, ") = 0  and R(", y, z, ") = 0, pourtant R(", x,
-                          z, ") != 0")
                     return x, y, z
     return True
 
@@ -102,7 +100,7 @@ def ferrer(relation):
 def complete(relation):
     for x in range(len(relation)):
         for y in range(len(relation)):
-            # au moins l'un des deux doit etre 1 pour que ce soit complet
+            # au moins l'un des deux doit être 1 pour que ce soit complet
             if x != y and relation[x][y] == 0 and relation[y][x] == 0:
                 return x, y
     return True
@@ -162,7 +160,7 @@ def transforme_ordre_total(relation):
     for tuple_perm in perm:
         # cree une matrice de taille n x n remplie de 1
         # on ne modifiera pas la diagonale pour conserver la réflexivité
-        distance_Kemeney = 0
+        distance_kemeney = 0
         S = [[1 for col in range(n)] for row in range(n)]
         for i in range(n):
             for j in range(i + 1, n):
@@ -175,12 +173,12 @@ def transforme_ordre_total(relation):
                 else:
                     S[j][i] = 0
                 # On calcul la distance de Kemeney de la matrice
-                if S[i][j] == relation[i][j]: distance_Kemeney += 1
-                if S[j][i] == relation[j][i]: distance_Kemeney += 1
+                if S[i][j] == relation[i][j]: distance_kemeney += 1
+                if S[j][i] == relation[j][i]: distance_kemeney += 1
         # si S est transitive et complète et
         # si S est la meilleure matrice trouvée on la garde
-        if transitive(S) and complete(S) and distance_min > distance_Kemeney:
-            distance_min = distance_Kemeney
+        if transitive(S) and complete(S) and distance_min > distance_kemeney:
+            distance_min = distance_kemeney
             meilleurS = S
     return meilleurS, distance_min
 
