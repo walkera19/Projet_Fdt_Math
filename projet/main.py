@@ -109,13 +109,13 @@ def complete(relation):
 
 
 def ordre_total(relation):
-    if reflexive(relation) and transitive(relation) and complete(relation) and not symetrie(relation):
+    if reflexive(relation) and transitive(relation) and complete(relation) and symetrie(relation) != True:
         return True
     return False
 
 
 def ordre_partiel(relation):
-    if reflexive(relation) and transitive(relation) and not symetrie(relation):
+    if reflexive(relation) and transitive(relation) and symetrie(relation) != True:
         return True
     return False
 
@@ -179,19 +179,15 @@ def transforme_ordre_total(relation):
                 if S[j][i] == relation[j][i]: distance_Kemeney += 1
         # si S est transitive et complète et
         # si S est la meilleure matrice trouvée on la garde
-        print(distance_Kemeney)
-        affiche_matrix(S)
         if transitive(S) and complete(S) and distance_min > distance_Kemeney:
             distance_min = distance_Kemeney
             meilleurS = S
-    print(meilleurS)
-    return meilleurS
+    return meilleurS, distance_min
 
 
 def affiche_matrix(mat):
     for ligne in mat:
         print(ligne)
-    print('\n')
 
 
 # fonction bijective qui associe à chaque couple d'indice un entier entre 1 et n
@@ -216,8 +212,9 @@ def affiche_prop(relation):
     so = semi_ordre(relation)
     oi = ordre_intervalle(relation)
 
+    # on obligé de mettre '== True' car les valeurs retournées ne sont pas toujours des bool
     print("Propriétés: ")
-    if ref ==  True:
+    if ref == True:
         print("La relation est reflexive")
     else:
         print("La relation n'est pas reflexive: R(", ref, ", ", ref, ") = 0", sep='')
@@ -309,11 +306,18 @@ def affiche_prop(relation):
 # GERER LES AFFICHAGES
 def main():
     # nom_fichier = input("entrez le nom du fichier (extension comprise) où se trouve la relation: ")
-    nom_fichier = 'transitive.txt'
+    nom_fichier = 'distance.txt'
 
     relation = lecture_fichier(nom_fichier)
 
     affiche_prop(relation)
+
+    # on obligé de mettre '!= True' car la valeur retournées n'est pas toujours un bool
+    if ordre_total(relation) != True:
+        s, d = transforme_ordre_total(relation)
+        print("\n\nL'ordre total le plus proche de la relation donnée est : ")
+        affiche_matrix(s)
+        print("\nLa distance de Kemeney est de", d)
 
 
 main()
