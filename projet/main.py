@@ -24,7 +24,8 @@ def lecture_fichier(nom_fichier):
     n = len(relation)
     for i in range(n):
         if len(relation[i]) != n:
-            return 'La matrice n\'est pas carrée'
+            print('La matrice n\'est pas de la forme attendue')
+            exit(1)
 
     return relation
 
@@ -107,37 +108,37 @@ def complete(relation):
 
 
 def ordre_total(relation):
-    if reflexive(relation) and transitive(relation) and complete(relation) and symetrie(relation) != True:
+    if reflexive(relation) == True and transitive(relation) == True and complete(relation) == True and symetrie(relation) != True:
         return True
     return False
 
 
 def ordre_partiel(relation):
-    if reflexive(relation) and transitive(relation) and symetrie(relation) != True:
+    if reflexive(relation) == True and transitive(relation) == True and symetrie(relation) != True:
         return True
     return False
 
 
 def preodre_partiel(relation):
-    if reflexive(relation) and transitive(relation):
+    if reflexive(relation) == True and transitive(relation) == True:
         return True
     return False
 
 
 def preordre_total(relation):
-    if reflexive(relation) and transitive(relation) and complete(relation):
+    if reflexive(relation) == True and transitive(relation) == True and complete(relation) == True:
         return True
     return False
 
 
 def semi_ordre(relation):
-    if reflexive(relation) and complete(relation) and semi_transitive(relation) and ferrer(relation):
+    if reflexive(relation) == True and complete(relation) == True and semi_transitive(relation) == True and ferrer(relation) == True:
         return True
     return False
 
 
 def ordre_intervalle(relation):
-    if reflexive(relation) and complete(relation) and ferrer(relation):
+    if reflexive(relation) == True and complete(relation) == True and ferrer(relation) == True:
         return True
     return False
 
@@ -175,7 +176,7 @@ def transforme_ordre_total(relation):
                 # On calcul la distance de Kemeney de la matrice
                 if S[i][j] == relation[i][j]: distance_kemeney += 1
                 if S[j][i] == relation[j][i]: distance_kemeney += 1
-        # si S est transitive et complète et
+        # si S est transitive et complète
         # si S est la meilleure matrice trouvée on la garde
         if transitive(S) and complete(S) and distance_min > distance_kemeney:
             distance_min = distance_kemeney
@@ -303,11 +304,9 @@ def affiche_prop(relation):
 
 # GERER LES AFFICHAGES
 def main():
-    # nom_fichier = input("entrez le nom du fichier (extension comprise) où se trouve la relation: ")
-    nom_fichier = 'distance.txt'
-
+    # nom_fichier = input("Entrez le nom du fichier (extension comprise) où se trouve la relation: ")
+    nom_fichier = '1.txt'
     relation = lecture_fichier(nom_fichier)
-
     affiche_prop(relation)
 
     # on obligé de mettre '!= True' car la valeur retournées n'est pas toujours un bool
