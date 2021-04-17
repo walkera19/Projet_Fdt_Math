@@ -64,7 +64,7 @@ Remarque: pour optimiser le stockage, on ne gardera en mémoire que la meilleure
 Du fait de la réflexivité, on sait que la diagonale sera entièrement composée de 1.
 De plus étant symétriques, on peut faire toutes les combinaires possibles sur les cellules strictement au dessus de la diagonale
 puis compléter de la même façon sous la diagonale. <br>
-On génère donc des permutations de taille n*(n-1)/2 composées de 0 et 1.
+On prend les nombres binaires de 0 a 2^((n*(n-1))/2) et on les stockent sous forme de liste. 
 On construit aussi une bijection qui associe a chaque couple d'indice un entier entre 0 et n*(n-1)/2.
 Grace à cette bijection, on peut construire une matrice par permutation.
 
