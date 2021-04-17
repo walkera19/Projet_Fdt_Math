@@ -32,6 +32,40 @@ def lecture_fichier(nom_fichier):
     return relation
 
 
+def distance_kemeney(R, S):
+    n = len(R)
+    if n != len(S) or len(R[0]) != len(S[0]):
+        print("Les matrices doivent être de même taille pour que l'on calcul la distance de Kemeney")
+        exit(1)
+
+    distance = 0
+
+    for i in range(n):
+        for j in range(n):
+            if S[i][j] != R[i][j]:
+                distance += 1
+
+    return distance
+
+
+def triangle_sup(permutation, n):
+    # cree une matrice de taille n x n remplie de 1
+    # on ne modifiera pas la diagonale pour conserver la réflexivité
+    S = [[1 for col in range(n)] for row in range(n)]
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            # on met les permutations trouvées dans la partie triangulaire supérieure de la matrice
+            cellule = permutation[bijection(i, j, n - 1)]
+            S[i][j] = cellule
+            # la matrice est symétrique
+            if cellule == 0:
+                S[j][i] = 1
+            else:
+                S[j][i] = 0
+    return S
+
+
 def transforme_ordre_total_2(relation):
     n = len(relation)
     nb_perm = int((n * (n - 1)) / 2)
@@ -46,32 +80,16 @@ def transforme_ordre_total_2(relation):
         # on ajoute des 0 au début pour qu'ils aient tous la bonne longueur
         perm = [0]*(nb_perm - len(perm)) + perm
 
-        # cree une matrice de taille n x n remplie de 1
-        # on ne modifiera pas la diagonale pour conserver la réflexivité
-        S = [[1 for col in range(n)] for row in range(n)]
-        distance_kemeney = 0
+        distance_k = 0
+        S = triangle_sup(perm, n)
 
-        for i in range(n):
-            for j in range(i + 1, n):
-                # on met les permutations trouvées dans la partie triangulaire supérieure de la matrice
-                cellule = perm[bijection(i, j, n - 1)]
-                S[i][j] = cellule
-                # la matrice est symétrique
-                if cellule == 0:
-                    S[j][i] = 1
-                else:
-                    S[j][i] = 0
-
-        if not prop.transitive(S) and not prop.complete(S):
+        if prop.transitive(S) != True or prop.complete(S) != True:
             continue
 
-        # On calcul la distance de Kemeney de la matrice
-        for i in range(n):
-            for j in range(n):
-                if S[i][j] == relation[i][j]: distance_kemeney += 1
+        distance_k = distance_kemeney(relation, S)
 
-        if distance_min > distance_kemeney:
-            distance_min = distance_kemeney
+        if distance_min > distance_k:
+            distance_min = distance_k
             meilleurS = copy.deepcopy(S)
     return meilleurS, distance_min
 
@@ -95,25 +113,26 @@ def transforme_ordre_total_3(relation):
     for tuple_perm in perm:
         # cree une matrice de taille n x n remplie de 1
         # on ne modifiera pas la diagonale pour conserver la réflexivité
-        distance_kemeney = 0
+        distance_k = 0
         S = [[1 for col in range(n)] for row in range(n)]
         for i in range(n):
             for j in range(i + 1, n):
                 # on met les permutations trouvées dans la partie triangulaire supérieure de la matrice
                 cellule = tuple_perm[bijection(i, j, n - 1)]
                 S[i][j] = cellule
+
                 # la matrice est symétrique
                 if cellule == 0:
                     S[j][i] = 1
                 else:
                     S[j][i] = 0
-                # On calcul la distance de Kemeney de la matrice
-                if S[i][j] == relation[i][j]: distance_kemeney += 1
-                if S[j][i] == relation[j][i]: distance_kemeney += 1
+
+        distance_k = distance_kemeney(relation, S)
+
         # si S est transitive et complète
         # si S est la meilleure matrice trouvée on la garde
-        if prop.transitive(S) and prop.complete(S) and distance_min > distance_kemeney:
-            distance_min = distance_kemeney
+        if prop.transitive(S) and prop.complete(S) and distance_min > distance_k:
+            distance_min = distance_k
             meilleurS = S
     return meilleurS, distance_min
 
@@ -135,7 +154,8 @@ def main():
     nom_fichier = '1.txt'
 
     relation = lecture_fichier(nom_fichier)
-    # affiche_prop(relation)
+    # prop.affiche_prop(relation)
+
 
     # on obligé de mettre '!= True' car la valeur retournées n'est pas toujours un bool
     if prop.ordre_total(relation) != True:
@@ -143,11 +163,12 @@ def main():
         print("\n\nL'ordre total le plus proche de la relation donnée est : ")
         affiche_matrix(s)
         print("\nLa distance de Kemeney est de", d)
+        prop.affiche_prop(s)
 
-        s, d = transforme_ordre_total_3(relation)
+        """s, d = transforme_ordre_total_3(relation)
         print("\n\nL'ordre total le plus proche de la relation donnée est : ")
         affiche_matrix(s)
-        print("\nLa distance de Kemeney est de", d)
+        print("\nLa distance de Kemeney est de", d)"""
 
 
 main()

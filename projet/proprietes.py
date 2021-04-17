@@ -158,9 +158,9 @@ def affiche_prop(relation):
               sep='')
 
     if antisym == True:
-        print("La relation est asymétrique")
+        print("La relation est antisymétrique")
     else:
-        print("La relation n'est pas asymétrique: R(", antisym[0], ', ', antisym[1], ") = 1 et R(", antisym[1], ', ', antisym[0],
+        print("La relation n'est pas antisymétrique: R(", antisym[0], ', ', antisym[1], ") = 1 et R(", antisym[1], ', ', antisym[0],
               ") = 1 ",
               sep='')
 
