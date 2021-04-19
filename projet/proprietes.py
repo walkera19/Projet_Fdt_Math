@@ -48,9 +48,12 @@ def semi_transitive(relation):
     for x in range(len(relation)):
         for y in range(len(relation)):
             for z in range(len(relation)):
+                cdt = False
                 for w in range(len(relation)):
-                    if relation[x][y] == 1 and relation[y][z] == 1 and relation[x][z] == 0 and relation[z][w] == 0:
-                        return x, y, z, w
+                    if not(relation[x][y] == 1 and relation[y][z] == 1 and relation[x][w] == 0 and relation[w][z] == 0):
+                        cdt = True
+                if not(cdt):
+                    return x, y, z
     return True
 
 
@@ -68,7 +71,7 @@ def ferrer(relation):
         for y in range(len(relation)):
             for z in range(len(relation)):
                 for w in range(len(relation)):
-                    if relation[x][y] == 1 and relation[y][z] == 1 and (relation[x][w] == 0 or relation[z][w] == 0):
+                    if relation[x][y] == 1 and relation[z][w] == 1 and relation[x][w] == 0 and relation[z][y] == 0:
                         return x, y, z, w
     return True
 
@@ -173,7 +176,7 @@ def affiche_prop(relation):
     if semi_t == True:
         print("La relation est semi-transitive")
     else:
-        print("La relation n'est pas semi-transitive: R(", semi_t[0], ', ', semi_t[1], ") = 1  and R(", semi_t[1], ', ',
+        print("La relation n'est pas semi-transitive: il n'existe pas de w tel que R(", semi_t[0], ', ', semi_t[1], ") = 1  and R(", semi_t[1], ', ',
               semi_t[2],
               ") = 1, pourtant R(", semi_t[0], ', ', semi_t[2], ") != 1 et R(", semi_t[2], ', ', semi_t[3], ") != 1",
               sep='')
