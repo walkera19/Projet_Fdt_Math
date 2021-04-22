@@ -1,6 +1,6 @@
 import copy
-import proprietes as prop
-import part2
+from proprietes import *
+from part2 import *
 
 # prend en argument le nom du fichier a lire
 # renvoie un tableau d'entier représentant la relation
@@ -81,7 +81,7 @@ def transforme_ordre_total(relation):
         distance_k = 0
         S = triangle_sup(perm, n)
 
-        if prop.transitive(S) != True or prop.complete(S) != True:
+        if transitive(S) != True or complete(S) != True:
             continue
 
         distance_k = distance_kemeney(relation, S)
@@ -110,10 +110,10 @@ def main():
     relation = lecture_fichier(nom_fichier)
     """
     # PARTIE  1
-    prop.affiche_prop(relation)
+    affiche_prop(relation)
     
     # on obligé de mettre '!= True' car la valeur retournées n'est pas toujours un bool
-    if prop.ordre_total(relation) != True:
+    if ordre_total(relation) != True:
         s, d = transforme_ordre_total(relation)
         print("\n\nL'ordre total le plus proche de la relation donnée est : ")
         affiche_matrix(s)
@@ -122,10 +122,12 @@ def main():
 
     # PARTIE 2
 
-    part2.degres_sommets(relation)
-
-    mat = [[1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 1, 0], [1, 1, 0, 0, 1, 0], [1, 1, 1, 0, 1, 0], [1, 1, 1, 1, 1, 0]]
+    mat = [[1, 0, 0, 0, 1, 0], [1, 1, 0, 0, 1, 0], [1, 1, 1, 0, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 1]]
+    # mat = [[1, 0, 1, 0], [1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]
+    # mat = [[1, 1, 1], [1, 1, 1], [0, 1, 1]]
     affiche_matrix(mat)
-    print('\n\n',part2.tri_topologique(mat), sep='')
+    print()
+    liste_moins = tri_tuples(mat) # 2 car on veut les degres moins
+    representation_graphique(mat, liste_moins)
 
 main()
