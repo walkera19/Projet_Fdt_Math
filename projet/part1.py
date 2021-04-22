@@ -108,10 +108,10 @@ def main():
     nom_fichier = 'symetrique.txt'
 
     relation = lecture_fichier(nom_fichier)
-
+    """
     # PARTIE  1
     prop.affiche_prop(relation)
-    """
+    
     # on obligé de mettre '!= True' car la valeur retournées n'est pas toujours un bool
     if prop.ordre_total(relation) != True:
         s, d = transforme_ordre_total(relation)
@@ -124,5 +124,8 @@ def main():
 
     part2.degres_sommets(relation)
 
+    mat = [[1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 1, 0], [1, 1, 0, 0, 1, 0], [1, 1, 1, 0, 1, 0], [1, 1, 1, 1, 1, 0]]
+    affiche_matrix(mat)
+    print('\n\n',part2.tri_topologique(mat), sep='')
 
 main()
