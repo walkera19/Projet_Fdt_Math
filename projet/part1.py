@@ -104,11 +104,10 @@ def bijection(i, j, n):
 
 
 def main():
-    # nom_fichier = input("Entrez le nom du fichier (extension comprise) où se trouve la relation: ")
-    nom_fichier = 'symetrique.txt'
+    nom_fichier = input("Entrez le nom du fichier (extension comprise) où se trouve la relation: ")
 
     relation = lecture_fichier(nom_fichier)
-    """
+
     # PARTIE  1
     affiche_prop(relation)
     
@@ -118,17 +117,15 @@ def main():
         print("\n\nL'ordre total le plus proche de la relation donnée est : ")
         affiche_matrix(s)
         print("\nLa distance de Kemeney est de", d)
-    """
+
 
     # PARTIE 2
-
-    mat = [[1, 0, 0, 0, 1, 0], [1, 1, 0, 0, 1, 0], [1, 1, 1, 0, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 1]]
-    # mat = [[1, 0, 1, 0], [1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]
-    # mat = [[1, 1, 1], [1, 1, 1], [0, 1, 1]]
-    affiche_matrix(mat)
-    print()
-    liste_moins, liste_plus = tri_tuples(mat) # 2 car on veut les degres moins
-    debut, fin = representation_graphique(mat, liste_moins, liste_plus)
+    if(semi_ordre(relation) != True):
+        print("\n\nLa relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique")
+        return 0
+    print('\n\nLa représentation graphique est donnée par les intervalles:')
+    liste_moins, liste_plus = tri_tuples(relation) # 2 car on veut les degres moins
+    debut, fin = representation_graphique(relation, liste_moins, liste_plus)
     affichage_intervalles(debut, fin)
 
 
