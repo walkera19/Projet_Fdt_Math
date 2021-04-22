@@ -122,12 +122,12 @@ def main():
 
     # PARTIE 2
 
-    mat = [[1, 0, 0, 0, 1, 0], [1, 1, 0, 0, 1, 0], [1, 1, 1, 0, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 1]]
+    # mat = [[1, 0, 0, 0, 1, 0], [1, 1, 0, 0, 1, 0], [1, 1, 1, 0, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 0], [1, 1, 1, 1, 1, 1]]
     # mat = [[1, 0, 1, 0], [1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]
-    # mat = [[1, 1, 1], [1, 1, 1], [0, 1, 1]]
+    mat = [[1, 1, 1], [1, 1, 1], [0, 1, 1]]
     affiche_matrix(mat)
     print()
-    liste_moins = tri_tuples(mat) # 2 car on veut les degres moins
-    representation_graphique(mat, liste_moins)
+    liste_moins, liste_plus = tri_tuples(mat) # 2 car on veut les degres moins
+    print(representation_graphique(mat, liste_moins, liste_plus))
 
 main()
