@@ -1,6 +1,7 @@
 import copy
 from proprietes import *
 from part2 import *
+from time import time
 
 # prend en argument le nom du fichier a lire
 # renvoie un tableau d'entier représentant la relation
@@ -103,9 +104,18 @@ def bijection(i, j, n):
     return int(j - 1 + (n * (n - 1)) / 2 - ((n - i) * (n - i - 1)) / 2)
 
 
+# fonction qui donne le temps de calcul de l'ordre total le plus proche en fonction de la taille de la matrice
+def test_optimisation(n):
+    # on génère une matrice de taille n qui n'est pas un ordre total
+    matrice = [[1 for col in range(n)] for row in range(n)]
+    temps_avant = time()
+    transforme_ordre_total(matrice)
+    temps = time() - temps_avant
+    return temps
+
+
 def main():
     nom_fichier = input("Entrez le nom du fichier (extension comprise) où se trouve la relation: ")
-
     relation = lecture_fichier(nom_fichier)
 
     # PARTIE  1
@@ -127,6 +137,10 @@ def main():
     liste_moins, liste_plus = tri_tuples(relation) # 2 car on veut les degres moins
     debut, fin = representation_graphique(relation, liste_moins, liste_plus)
     affichage_intervalles(debut, fin)
+    affiche_matrix(relation)
+
+    """for n in range(8):
+        print("n = ", n, "\ttemps : ", test_optimisation(n))"""
 
 
 main()
