@@ -1,13 +1,19 @@
 # Projet_Fondements_Math
 
-## Strucutre générale:
+## Structure générale:
+Partie 1
   1. Lecture du fichier
   2. Liste des propriétés satisfaites ou non par la relation
   3. Liste de structures de préférances vérifiées par la relation
   4. Ordre total le plus proche en distance de Kemeney
 
+Partie 2
+  1. Calcul des degrés
+  2. Representation graphique
+
 <br><br>
 
+## Partie 1
 ### 1. Lecture du fichier
 L'utilisateur doit saisir le nom du fichier (avec extention) dans l'invite de commande. 
 Le fichier doit contenir une matrice carrée de 0 et de 1.<br>
@@ -30,8 +36,9 @@ Les propriétés étudiées sont:
   - semi-transitive
   - negativement transitive
   - ferrer
-  -complète
-<br>Pour chacune de ces relations, on affichera un message indiquant si elle est vérifiée ou non par la relation lue dans le fichier.
+  - complète
+<br>
+Pour chacune de ces relations, on affichera un message indiquant si elle est vérifiée ou non par la relation lue dans le fichier.
 Si elle ne l'est pas, on donnera des éléments qui violent cette propriété.
 
 <br>
@@ -67,4 +74,34 @@ puis compléter de la même façon sous la diagonale. <br>
 On prend les nombres binaires de 0 a 2^((n*(n-1))/2) et on les stockent sous forme de liste. 
 On construit aussi une bijection qui associe a chaque couple d'indice un entier entre 0 et n*(n-1)/2.
 Grace à cette bijection, on peut construire une matrice par permutation.
+
+<br>
+<br>
+<br>
+<br>
+
+## Partie 2
+### 1. Calcul des degrés
+On a choisi de retourner le degré, 'degré moins' et 'degré plus' car nous en aurons besoin pour la suite. Les 'degrés plus' sont calculés comme la sommes des 1 sur les lignes, les 'degrés moins' sont la somme des 1 sur les colonnes et les degrés sont la différence des deux.
+
+<br>
+<br>
+
+### 2. Representation graphique 
+Trouver un algorithme pour la représentation graphique a été la partie la plus difficile de ce projet.
+<br>
+Nous avons choisi l'algorithme suivant:
+
+  - On tri les sommets par 'degrés moins'
+  - On prend les sommets un par un en suivant cet ordre
+  - Pour chaque sommet, on calcul son 'niveau moins' :
+      * 0 si il n'a pas de précédents
+      * sinon on prend le plus grand 'niveau moins' de ses précédents et on y ajoute 1
+  - Cela nous donne le début a chaque intervalle. On procède de façon similaire pour la fin des intervalles: on change juste les 'degrés moins' par des 'degrés plus' et pour calculer le 'niveau plus', on prend:
+      * le maximum des 'niveau moins' + 1 si le sommet n'a pas de suivant
+      * sinon on prend le plus grand 'niveau plus' de ses précédents et on y enlève 1
+<br>
+Pour ne pas que les intevalles se chevauchent, on décale tout les début de - 0.1 et toutes les fins de + 0.1. <br>
+
+L'algorithme marche la plus part du temps mais présente des erreurs dans la gestion des indifférences.
 
