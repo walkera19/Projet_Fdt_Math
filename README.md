@@ -101,7 +101,7 @@ Nous avons choisi l'algorithme suivant:
       * le maximum des 'niveau moins' + 1 si le sommet n'a pas de suivant
       * sinon on prend le plus grand 'niveau plus' de ses précédents et on y enlève 1
 <br>
-Pour ne pas que les intevalles se chevauchent, on décale tout les début de - 0.1 et toutes les fins de + 0.1. <br>
+Pour ne pas que les intervalles se chevauchent, on décale tout les début de - 0.1 et toutes les fins de + 0.1. <br>
 
-L'algorithme marche la plus part du temps mais présente des erreurs dans la gestion des indifférences.
+L'algorithme fonctionne la plus part du temps mais présente des erreurs dans la gestion des indifférences.
 
