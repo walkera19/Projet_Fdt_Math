@@ -85,7 +85,7 @@ Grace à cette bijection, on peut construire une matrice par permutation.
 <br>
 
 ### 5. Résultats du programme
-<br>
+
 #### 1. Premier fichier texte <br>
 Propriétés: <br>
 La relation est reflexive<br>
@@ -129,6 +129,239 @@ e: [0.1, 0.9]<br>
 
 <br>
 <br>
+
+#### 2. Deuxième fichier texte <br>
+Propriétés: <br>
+La relation est reflexive<br>
+La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
+La relation n'est pas asymétrique: R(0, 0) = 1<br>
+La relation n'est pas antisymétrique: R(1, 2) = 1 et R(2, 1) = 1 <br>
+La relation est transitive<br>
+La relation est semi-transitive<br>
+La relation est négativement transitive<br>
+La relation est ferrer<br>
+La relation est complète<br>
+
+Ordres :<br>
+La relation n'est pas un ordre total<br>
+La relation n'est pas un ordre partiel<br>
+La relation est un préordre partiel<br>
+La relation est un préordre total<br>
+La relation est un semi-ordre<br>
+La relation est un ordre d'intervalle<br>
+
+L'ordre total le plus proche de la relation donnée est : <br>
+[1, 1, 1, 1, 0, 0]<br>
+[0, 1, 0, 0, 0, 0]<br>
+[0, 1, 1, 0, 0, 0]<br>
+[0, 1, 1, 1, 0, 0]<br>
+[1, 1, 1, 1, 1, 0]<br>
+[1, 1, 1, 1, 1, 1]<br>
+
+La distance de Kemeney est de 4
+
+La représentation graphique est donnée par les intervalles:<br>
+a: [1.1, 1.9]<br>
+b: [0.1, 0.9]<br>
+c: [0.1, 0.9]<br>
+d: [0.1, 0.9]<br>
+e: [2.1, 2.9]<br>
+f: [2.1, 2.9]<br>
+[1, 1, 1, 1, 0, 0]<br>
+[0, 1, 1, 1, 0, 0]<br>
+[0, 1, 1, 1, 0, 0]<br>
+[0, 1, 1, 1, 0, 0]<br>
+[1, 1, 1, 1, 1, 1]<br>
+[1, 1, 1, 1, 1, 1]<br>
+
+<br>
+<br>
+
+#### 3. Troisième fichier texte <br>
+Propriétés: <br>
+La relation est reflexive<br>
+La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
+La relation n'est pas asymétrique: R(0, 0) = 1<br>
+La relation est antisymétrique<br>
+La relation n'est pas transitive: R(0, 1) = 1 et R(1, 0) = 1, pourtant R(0, 2) = 0 <br>
+La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 2) != 1 et R(2, 0) != 1<br>
+La relation n'est pas négativement-transitive: R(0, 2) = 0  et R(2, 0) = 0, pourtant R(2, 0) != 0<br>
+La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 2) == 0<br>
+La relation n'est pas complète: R(0, 2) = 0 et R(2, 0) = 0<br>
+
+Ordres :<br>
+La relation n'est pas un ordre total<br>
+La relation n'est pas un ordre partiel<br>
+La relation n'est pas un préordre partiel<br>
+La relation n'est pas un préordre total<br>
+La relation n'est pas un semi-ordre<br>
+La relation n'est pas un ordre d'intervalle<br>
+
+L'ordre total le plus proche de la relation donnée est : <br>
+[1, 1, 1, 0, 0, 0]<br>
+[0, 1, 1, 0, 0, 0]<br>
+[0, 0, 1, 0, 0, 0]<br>
+[1, 1, 1, 1, 0, 0]<br>
+[1, 1, 1, 1, 1, 0]<br>
+[1, 1, 1, 1, 1, 1]<br>
+
+La distance de Kemeney est de 9<br>
+
+La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique
+
+<br>
+<br>
+
+#### 4. Quatrième fichier texte <br>
+Propriétés: <br>
+La relation est reflexive<br>
+La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
+La relation n'est pas asymétrique: R(0, 0) = 1<br>
+La relation n'est pas antisymétrique: R(0, 2) = 1 et R(2, 0) = 1 <br>
+La relation n'est pas transitive: R(2, 0) = 1 et R(0, 2) = 1, pourtant R(2, 3) = 0 <br>
+La relation est semi-transitive<br>
+La relation est négativement transitive<br>
+La relation est ferrer<br>
+La relation est complète<br>
+
+Ordres :<br>
+La relation n'est pas un ordre total<br>
+La relation n'est pas un ordre partiel<br>
+La relation n'est pas un préordre partiel<br>
+La relation n'est pas un préordre total<br>
+La relation est un semi-ordre<br>
+La relation est un ordre d'intervalle<br>
+
+L'ordre total le plus proche de la relation donnée est : <br>
+[1, 0, 0, 0, 0]<br>
+[1, 1, 1, 1, 0]<br>
+[1, 0, 1, 0, 0]<br>
+[1, 0, 1, 1, 0]<br>
+[1, 1, 1, 1, 1]<br>
+
+La distance de Kemeney est de 2<br>
+
+La représentation graphique est donnée par les intervalles:<br>
+a: [0.1, 1.9]<br>
+b: [2.1, 2.9]<br>
+c: [0.1, 0.9]<br>
+d: [1.1, 1.9]<br>
+e: [3.1, 3.9]<br>
+[1, 0, 1, 1, 0]<br>
+[1, 1, 1, 1, 0]<br>
+[1, 0, 1, 0, 0]<br>
+[1, 0, 1, 1, 0]<br>
+[1, 1, 1, 1, 1]<br>
+
+<br>
+<br>
+
+#### 5. Cinquième fichier texte <br>
+Propriétés: <br>
+La relation est reflexive<br>
+La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
+La relation n'est pas asymétrique: R(0, 0) = 1<br>
+La relation est antisymétrique<br>
+La relation est transitive<br>
+La relation est semi-transitive<br>
+La relation est négativement transitive<br>
+La relation est ferrer<br>
+La relation est complète<br>
+
+Ordres :<br>
+La relation est un ordre total<br>
+La relation est un ordre partiel<br>
+La relation est un préordre partiel<br>
+La relation est un préordre total<br>
+La relation est un semi-ordre<br>
+La relation est un ordre d'intervalle<br>
+
+La représentation graphique est donnée par les intervalles:<br>
+a: [3.1, 3.9]<br>
+b: [5.1, 5.9]<br>
+c: [0.1, 0.9]<br>
+d: [2.1, 2.9]<br>
+e: [4.1, 4.9]<br>
+f: [1.1, 1.9]<br>
+[1, 0, 1, 1, 0, 1]<br>
+[1, 1, 1, 1, 1, 1]<br>
+[0, 0, 1, 0, 0, 0]<br>
+[0, 0, 1, 1, 0, 1]<br>
+[1, 0, 1, 1, 1, 1]<br>
+[0, 0, 1, 0, 0, 1]<br>
+
+<br>
+<br>
+
+#### 6. Sixième fichier texte <br>
+Propriétés: <br>
+La relation est reflexive<br>
+La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
+La relation n'est pas asymétrique: R(0, 0) = 1<br>
+La relation est antisymétrique<br>
+La relation n'est pas transitive: R(0, 1) = 1 et R(1, 0) = 1, pourtant R(0, 2) = 0 <br>
+La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 3) != 1 et R(3, 0) != 1<br>
+La relation n'est pas négativement-transitive: R(0, 2) = 0  et R(2, 1) = 0, pourtant R(2, 1) != 0<br>
+La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 2) == 0<br>
+La relation n'est pas complète: R(0, 3) = 0 et R(3, 0) = 0<br>
+
+Ordres :<br>
+La relation n'est pas un ordre total<br>
+La relation n'est pas un ordre partiel<br>
+La relation n'est pas un préordre partiel<br>
+La relation n'est pas un préordre total<br>
+La relation n'est pas un semi-ordre<br>
+La relation n'est pas un ordre d'intervalle<br>
+
+L'ordre total le plus proche de la relation donnée est : <br>
+[1, 0, 0, 0, 0]<br>
+[1, 1, 1, 1, 0]<br>
+[1, 0, 1, 1, 0]<br>
+[1, 0, 0, 1, 0]<br>
+[1, 1, 1, 1, 1]<br>
+
+La distance de Kemeney est de 7<br>
+
+La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique<br>
+
+<br>
+<br>
+
+#### 7. Septième fichier texte <br>
+Propriétés: <br>
+La relation est reflexive<br>
+La relation n'est pas symétrique: R(0, 3) != R(3, 0)<br>
+La relation n'est pas asymétrique: R(0, 0) = 1<br>
+La relation est antisymétrique<br>
+La relation est transitive<br>
+La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 1) != 1 et R(1, 0) != 1<br>
+La relation n'est pas négativement-transitive: R(0, 1) = 0  et R(1, 0) = 0, pourtant R(1, 0) != 0<br>
+La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 1) == 0<br>
+La relation n'est pas complète: R(0, 1) = 0 et R(1, 0) = 0<br>
+
+Ordres :<br>
+La relation n'est pas un ordre total<br>
+La relation est un ordre partiel<br>
+La relation est un préordre partiel<br>
+La relation n'est pas un préordre total<br>
+La relation n'est pas un semi-ordre<br>
+La relation n'est pas un ordre d'intervalle<br>
+
+L'ordre total le plus proche de la relation donnée est : <br>
+[1, 0, 0, 1, 1, 1]<br>
+[1, 1, 0, 1, 1, 1]<br>
+[1, 1, 1, 1, 1, 1]<br>
+[0, 0, 0, 1, 1, 0]<br>
+[0, 0, 0, 0, 1, 0]<br>
+[0, 0, 0, 1, 1, 1]<br>
+
+La distance de Kemeney est de 6.<br>
+
+La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique.<br>
+
+<br>
+<br>
+
 
 ## Partie 2
 ### 1. Calcul des degrés
