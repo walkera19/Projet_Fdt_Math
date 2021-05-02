@@ -97,7 +97,7 @@ Propriétés:
   - La relation est négativement transitive
   - La relation est ferrer
   - La relation est complète
-<br>
+
 Ordres :
   - La relation n'est pas un ordre total
   - La relation n'est pas un ordre partiel
@@ -105,16 +105,16 @@ Ordres :
   - La relation n'est pas un préordre total
   - La relation est un semi-ordre
   - La relation est un ordre d'intervalle
-<br>
+
 L'ordre total le plus proche de la relation donnée est :
 [1, 1, 0, 0, 0]<br>
 [0, 1, 0, 0, 0]<br>
 [1, 1, 1, 0, 1]<br>
 [1, 1, 1, 1, 1]<br>
 [1, 1, 0, 0, 1]<br>
-<br>
+
 La distance de Kemeney est de 4<br>
-<br>
+
 La représentation graphique est donnée par les intervalles:<br>
 a: [1.1, 1.9]<br>
 b: [0.1, 0.9]<br>
@@ -131,24 +131,24 @@ e: [0.1, 0.9]<br>
 <br>
 
 #### 2. Deuxième fichier texte <br>
-Propriétés: <br>
-La relation est reflexive<br>
-La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
-La relation n'est pas asymétrique: R(0, 0) = 1<br>
-La relation n'est pas antisymétrique: R(1, 2) = 1 et R(2, 1) = 1 <br>
-La relation est transitive<br>
-La relation est semi-transitive<br>
-La relation est négativement transitive<br>
-La relation est ferrer<br>
-La relation est complète<br>
+Propriétés:
+  - La relation est reflexive 
+  - La relation n'est pas symétrique: R(0, 1) != R(1, 0) 
+  - La relation n'est pas asymétrique: R(0, 0) = 1 
+  - La relation n'est pas antisymétrique: R(1, 2) = 1 et R(2, 1) = 1  
+  - La relation est transitive 
+  - La relation est semi-transitive 
+  - La relation est négativement transitive 
+  - La relation est ferrer 
+  - La relation est complète 
 
-Ordres :<br>
-La relation n'est pas un ordre total<br>
-La relation n'est pas un ordre partiel<br>
-La relation est un préordre partiel<br>
-La relation est un préordre total<br>
-La relation est un semi-ordre<br>
-La relation est un ordre d'intervalle<br>
+Ordres :
+  - La relation n'est pas un ordre total 
+  - La relation n'est pas un ordre partiel 
+  - La relation est un préordre partiel 
+  - La relation est un préordre total 
+  - La relation est un semi-ordre 
+  - La relation est un ordre d'intervalle 
 
 L'ordre total le plus proche de la relation donnée est : <br>
 [1, 1, 1, 1, 0, 0]<br>
@@ -158,7 +158,7 @@ L'ordre total le plus proche de la relation donnée est : <br>
 [1, 1, 1, 1, 1, 0]<br>
 [1, 1, 1, 1, 1, 1]<br>
 
-La distance de Kemeney est de 4
+La distance de Kemeney est de 4.
 
 La représentation graphique est donnée par les intervalles:<br>
 a: [1.1, 1.9]<br>
@@ -178,24 +178,24 @@ f: [2.1, 2.9]<br>
 <br>
 
 #### 3. Troisième fichier texte <br>
-Propriétés: <br>
-La relation est reflexive<br>
-La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
-La relation n'est pas asymétrique: R(0, 0) = 1<br>
-La relation est antisymétrique<br>
-La relation n'est pas transitive: R(0, 1) = 1 et R(1, 0) = 1, pourtant R(0, 2) = 0 <br>
-La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 2) != 1 et R(2, 0) != 1<br>
-La relation n'est pas négativement-transitive: R(0, 2) = 0  et R(2, 0) = 0, pourtant R(2, 0) != 0<br>
-La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 2) == 0<br>
-La relation n'est pas complète: R(0, 2) = 0 et R(2, 0) = 0<br>
+Propriétés:
+  - La relation est reflexive 
+  - La relation n'est pas symétrique: R(0, 1) != R(1, 0) 
+  - La relation n'est pas asymétrique: R(0, 0) = 1 
+  - La relation est antisymétrique 
+  - La relation n'est pas transitive: R(0, 1) = 1 et R(1, 0) = 1, pourtant R(0, 2) = 0  
+  - La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 2) != 1 et R(2, 0) != 1 
+  - La relation n'est pas négativement-transitive: R(0, 2) = 0  et R(2, 0) = 0, pourtant R(2, 0) != 0 
+  - La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 2) == 0 
+  - La relation n'est pas complète: R(0, 2) = 0 et R(2, 0) = 0 
 
-Ordres :<br>
-La relation n'est pas un ordre total<br>
-La relation n'est pas un ordre partiel<br>
-La relation n'est pas un préordre partiel<br>
-La relation n'est pas un préordre total<br>
-La relation n'est pas un semi-ordre<br>
-La relation n'est pas un ordre d'intervalle<br>
+Ordres :
+  - La relation n'est pas un ordre total 
+  - La relation n'est pas un ordre partiel 
+  - La relation n'est pas un préordre partiel 
+  - La relation n'est pas un préordre total 
+  - La relation n'est pas un semi-ordre 
+  - La relation n'est pas un ordre d'intervalle 
 
 L'ordre total le plus proche de la relation donnée est : <br>
 [1, 1, 1, 0, 0, 0]<br>
@@ -205,32 +205,32 @@ L'ordre total le plus proche de la relation donnée est : <br>
 [1, 1, 1, 1, 1, 0]<br>
 [1, 1, 1, 1, 1, 1]<br>
 
-La distance de Kemeney est de 9<br>
+La distance de Kemeney est de 9.
 
-La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique
+La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique.
 
 <br>
 <br>
 
 #### 4. Quatrième fichier texte <br>
-Propriétés: <br>
-La relation est reflexive<br>
-La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
-La relation n'est pas asymétrique: R(0, 0) = 1<br>
-La relation n'est pas antisymétrique: R(0, 2) = 1 et R(2, 0) = 1 <br>
-La relation n'est pas transitive: R(2, 0) = 1 et R(0, 2) = 1, pourtant R(2, 3) = 0 <br>
-La relation est semi-transitive<br>
-La relation est négativement transitive<br>
-La relation est ferrer<br>
-La relation est complète<br>
+Propriétés:
+  - La relation est reflexive 
+  - La relation n'est pas symétrique: R(0, 1) != R(1, 0) 
+  - La relation n'est pas asymétrique: R(0, 0) = 1 
+  - La relation n'est pas antisymétrique: R(0, 2) = 1 et R(2, 0) = 1  
+  - La relation n'est pas transitive: R(2, 0) = 1 et R(0, 2) = 1, pourtant R(2, 3) = 0  
+  - La relation est semi-transitive 
+  - La relation est négativement transitive 
+  - La relation est ferrer 
+  - La relation est complète 
 
-Ordres :<br>
-La relation n'est pas un ordre total<br>
-La relation n'est pas un ordre partiel<br>
-La relation n'est pas un préordre partiel<br>
-La relation n'est pas un préordre total<br>
-La relation est un semi-ordre<br>
-La relation est un ordre d'intervalle<br>
+Ordres :
+  - La relation n'est pas un ordre total 
+  - La relation n'est pas un ordre partiel 
+  - La relation n'est pas un préordre partiel 
+  - La relation n'est pas un préordre total 
+  - La relation est un semi-ordre 
+  - La relation est un ordre d'intervalle 
 
 L'ordre total le plus proche de la relation donnée est : <br>
 [1, 0, 0, 0, 0]<br>
@@ -239,7 +239,7 @@ L'ordre total le plus proche de la relation donnée est : <br>
 [1, 0, 1, 1, 0]<br>
 [1, 1, 1, 1, 1]<br>
 
-La distance de Kemeney est de 2<br>
+La distance de Kemeney est de 2.
 
 La représentation graphique est donnée par les intervalles:<br>
 a: [0.1, 1.9]<br>
@@ -257,24 +257,24 @@ e: [3.1, 3.9]<br>
 <br>
 
 #### 5. Cinquième fichier texte <br>
-Propriétés: <br>
-La relation est reflexive<br>
-La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
-La relation n'est pas asymétrique: R(0, 0) = 1<br>
-La relation est antisymétrique<br>
-La relation est transitive<br>
-La relation est semi-transitive<br>
-La relation est négativement transitive<br>
-La relation est ferrer<br>
-La relation est complète<br>
+Propriétés:
+  - La relation est reflexive 
+  - La relation n'est pas symétrique: R(0, 1) != R(1, 0) 
+  - La relation n'est pas asymétrique: R(0, 0) = 1 
+  - La relation est antisymétrique 
+  - La relation est transitive 
+  - La relation est semi-transitive 
+  - La relation est négativement transitive 
+  - La relation est ferrer 
+  - La relation est complète 
 
-Ordres :<br>
-La relation est un ordre total<br>
-La relation est un ordre partiel<br>
-La relation est un préordre partiel<br>
-La relation est un préordre total<br>
-La relation est un semi-ordre<br>
-La relation est un ordre d'intervalle<br>
+Ordres :
+  - La relation est un ordre total 
+  - La relation est un ordre partiel 
+  - La relation est un préordre partiel 
+  - La relation est un préordre total 
+  - La relation est un semi-ordre 
+  - La relation est un ordre d'intervalle 
 
 La représentation graphique est donnée par les intervalles:<br>
 a: [3.1, 3.9]<br>
@@ -294,24 +294,24 @@ f: [1.1, 1.9]<br>
 <br>
 
 #### 6. Sixième fichier texte <br>
-Propriétés: <br>
-La relation est reflexive<br>
-La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
-La relation n'est pas asymétrique: R(0, 0) = 1<br>
-La relation est antisymétrique<br>
-La relation n'est pas transitive: R(0, 1) = 1 et R(1, 0) = 1, pourtant R(0, 2) = 0 <br>
-La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 3) != 1 et R(3, 0) != 1<br>
-La relation n'est pas négativement-transitive: R(0, 2) = 0  et R(2, 1) = 0, pourtant R(2, 1) != 0<br>
-La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 2) == 0<br>
-La relation n'est pas complète: R(0, 3) = 0 et R(3, 0) = 0<br>
+Propriétés:
+  - La relation est reflexive 
+  - La relation n'est pas symétrique: R(0, 1) != R(1, 0) 
+  - La relation n'est pas asymétrique: R(0, 0) = 1 
+  - La relation est antisymétrique 
+  - La relation n'est pas transitive: R(0, 1) = 1 et R(1, 0) = 1, pourtant R(0, 2) = 0  
+  - La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 3) != 1 et R(3, 0) != 1 
+  - La relation n'est pas négativement-transitive: R(0, 2) = 0  et R(2, 1) = 0, pourtant R(2, 1) != 0 
+  - La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 2) == 0 
+  - La relation n'est pas complète: R(0, 3) = 0 et R(3, 0) = 0 
 
-Ordres :<br>
-La relation n'est pas un ordre total<br>
-La relation n'est pas un ordre partiel<br>
-La relation n'est pas un préordre partiel<br>
-La relation n'est pas un préordre total<br>
-La relation n'est pas un semi-ordre<br>
-La relation n'est pas un ordre d'intervalle<br>
+Ordres :
+  - La relation n'est pas un ordre total 
+  - La relation n'est pas un ordre partiel 
+  - La relation n'est pas un préordre partiel 
+  - La relation n'est pas un préordre total 
+  - La relation n'est pas un semi-ordre 
+  - La relation n'est pas un ordre d'intervalle 
 
 L'ordre total le plus proche de la relation donnée est : <br>
 [1, 0, 0, 0, 0]<br>
@@ -320,32 +320,32 @@ L'ordre total le plus proche de la relation donnée est : <br>
 [1, 0, 0, 1, 0]<br>
 [1, 1, 1, 1, 1]<br>
 
-La distance de Kemeney est de 7<br>
+La distance de Kemeney est de 7.
 
-La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique<br>
+La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique.
 
 <br>
 <br>
 
 #### 7. Septième fichier texte <br>
-Propriétés: <br>
-La relation est reflexive<br>
-La relation n'est pas symétrique: R(0, 3) != R(3, 0)<br>
-La relation n'est pas asymétrique: R(0, 0) = 1<br>
-La relation est antisymétrique<br>
-La relation est transitive<br>
-La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 1) != 1 et R(1, 0) != 1<br>
-La relation n'est pas négativement-transitive: R(0, 1) = 0  et R(1, 0) = 0, pourtant R(1, 0) != 0<br>
-La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 1) == 0<br>
-La relation n'est pas complète: R(0, 1) = 0 et R(1, 0) = 0<br>
+Propriétés:
+  - La relation est reflexive 
+  - La relation n'est pas symétrique: R(0, 3) != R(3, 0) 
+  - La relation n'est pas asymétrique: R(0, 0) = 1 
+  - La relation est antisymétrique 
+  - La relation est transitive 
+  - La relation n'est pas semi-transitive: R(0, 0) = 1  and R(0, 0) = 1, pourtant R(0, 1) != 1 et R(1, 0) != 1 
+  - La relation n'est pas négativement-transitive: R(0, 1) = 0  et R(1, 0) = 0, pourtant R(1, 0) != 0 
+  - La relation n'est pas ferrer: R(0, 0) = 1  et R(0, 1) = 1, pourtant R(0, 1) == 0 ou R(1, 1) == 0 
+  - La relation n'est pas complète: R(0, 1) = 0 et R(1, 0) = 0 
 
-Ordres :<br>
-La relation n'est pas un ordre total<br>
-La relation est un ordre partiel<br>
-La relation est un préordre partiel<br>
-La relation n'est pas un préordre total<br>
-La relation n'est pas un semi-ordre<br>
-La relation n'est pas un ordre d'intervalle<br>
+Ordres :
+  - La relation n'est pas un ordre total 
+  - La relation est un ordre partiel 
+  - La relation est un préordre partiel 
+  - La relation n'est pas un préordre total 
+  - La relation n'est pas un semi-ordre 
+  - La relation n'est pas un ordre d'intervalle 
 
 L'ordre total le plus proche de la relation donnée est : <br>
 [1, 0, 0, 1, 1, 1]<br>
@@ -355,9 +355,9 @@ L'ordre total le plus proche de la relation donnée est : <br>
 [0, 0, 0, 0, 1, 0]<br>
 [0, 0, 0, 1, 1, 1]<br>
 
-La distance de Kemeney est de 6.<br>
+La distance de Kemeney est de 6.
 
-La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique.<br>
+La relation n'étant pas un semi-ordre, on n'affichera pas sa representation graphique.
 
 <br>
 <br>
