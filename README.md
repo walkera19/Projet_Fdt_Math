@@ -87,8 +87,8 @@ Grace à cette bijection, on peut construire une matrice par permutation.
 ### 5. Résultats du programme
 
 #### 1. Premier fichier texte <br>
-Propriétés: <br>
-La relation est reflexive<br>
+Propriétés:
+  - La relation est reflexive
 La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
 La relation n'est pas asymétrique: R(0, 0) = 1<br>
 La relation n'est pas antisymétrique: R(0, 3) = 1 et R(3, 0) = 1 <br>
