@@ -86,7 +86,7 @@ Grace à cette bijection, on peut construire une matrice par permutation.
 
 ### 5. Résultats du programme
 <br>
-##### 1. Premier fichier texte
+#### 1. Premier fichier texte <br>
 Propriétés: <br>
 La relation est reflexive<br>
 La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
@@ -106,7 +106,6 @@ La relation n'est pas un préordre total<br>
 La relation est un semi-ordre<br>
 La relation est un ordre d'intervalle<br>
 <br>
-
 L'ordre total le plus proche de la relation donnée est :
 [1, 1, 0, 0, 0]<br>
 [0, 1, 0, 0, 0]<br>
@@ -115,8 +114,7 @@ L'ordre total le plus proche de la relation donnée est :
 [1, 1, 0, 0, 1]<br>
 <br>
 La distance de Kemeney est de 4<br>
-<br><br>
-
+<br>
 La représentation graphique est donnée par les intervalles:<br>
 a: [1.1, 1.9]<br>
 b: [0.1, 0.9]<br>
