@@ -11,6 +11,11 @@ Partie 2
   1. Calcul des degrés
   2. Representation graphique
 
+Partie 3 : Resultats
+  1. Résultats partie 1
+  2. Temps de calcul pour l'ordre total
+  3. Résultats partie 2
+
 <br><br>
 
 ## Partie 1
@@ -105,3 +110,15 @@ Pour ne pas que les intervalles se chevauchent, on décale tout les début de - 
 
 L'algorithme fonctionne la plus part du temps mais présente des erreurs dans la gestion des indifférences.
 
+## Résultats
+### 1. Résultats partie 1
+
+
+### 2. Temps de calcul pour l'ordre total
+On note n la taille d'une matrice qui n'est pas un semi-ordre et on donne le temps que prend notre programme à la transformer en semi-ordre:
+Pour n = 2, le temps est de 0.0 secondes
+Pour n = 3, le temps est de 0.0 secondes
+Pour n = 4, le temps est de 0.001994609832763672
+Pour n = 5, le temps est de 0.04039931297302246
+Pour n = 6, le temps est de 1.5992064476013184
+Pour n = 7, le temps est de 134.24388194084167
