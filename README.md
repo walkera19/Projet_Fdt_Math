@@ -6,6 +6,7 @@ Partie 1
   2. Liste des propriétés satisfaites ou non par la relation
   3. Liste de structures de préférances vérifiées par la relation
   4. Ordre total le plus proche en distance de Kemeney
+  5. Résultats du programme
 
 Partie 2
   1. Calcul des degrés
@@ -82,6 +83,53 @@ Grace à cette bijection, on peut construire une matrice par permutation.
 
 <br>
 <br>
+
+### 5. Résultats du programme
+<br>
+##### 1. Premier fichier texte
+Propriétés: <br>
+La relation est reflexive<br>
+La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
+La relation n'est pas asymétrique: R(0, 0) = 1<br>
+La relation n'est pas antisymétrique: R(0, 3) = 1 et R(3, 0) = 1 <br>
+La relation n'est pas transitive: R(0, 3) = 1 et R(3, 0) = 1, pourtant R(0, 2) = 0 <br>
+La relation est semi-transitive<br>
+La relation est négativement transitive<br>
+La relation est ferrer<br>
+La relation est complète<br>
+<br>
+<br>
+Ordres :
+La relation n'est pas un ordre total<br>
+La relation n'est pas un ordre partiel<br>
+La relation n'est pas un préordre partiel<br>
+La relation n'est pas un préordre total<br>
+La relation est un semi-ordre<br>
+La relation est un ordre d'intervalle<br>
+<br><br>
+
+L'ordre total le plus proche de la relation donnée est :<br> 
+[1, 1, 0, 0, 0]
+[0, 1, 0, 0, 0]
+[1, 1, 1, 0, 1]
+[1, 1, 1, 1, 1]
+[1, 1, 0, 0, 1]
+<br>
+La distance de Kemeney est de 4<br>
+<br><br>
+
+La représentation graphique est donnée par les intervalles:<br>
+a: [1.1, 1.9]
+b: [0.1, 0.9]
+c: [2.1, 2.9]
+d: [1.1, 2.9]
+e: [0.1, 0.9]
+[1, 1, 0, 1, 1]
+[0, 1, 0, 0, 1]
+[1, 1, 1, 1, 1]
+[1, 1, 1, 1, 1]
+[1, 1, 0, 0, 1]
+
 <br>
 <br>
 
