@@ -89,22 +89,22 @@ Grace à cette bijection, on peut construire une matrice par permutation.
 #### 1. Premier fichier texte <br>
 Propriétés:
   - La relation est reflexive
-La relation n'est pas symétrique: R(0, 1) != R(1, 0)<br>
-La relation n'est pas asymétrique: R(0, 0) = 1<br>
-La relation n'est pas antisymétrique: R(0, 3) = 1 et R(3, 0) = 1 <br>
-La relation n'est pas transitive: R(0, 3) = 1 et R(3, 0) = 1, pourtant R(0, 2) = 0 <br>
-La relation est semi-transitive<br>
-La relation est négativement transitive<br>
-La relation est ferrer<br>
-La relation est complète<br>
+  - La relation n'est pas symétrique: R(0, 1) != R(1, 0)
+  - La relation n'est pas asymétrique: R(0, 0) = 1
+  - La relation n'est pas antisymétrique: R(0, 3) = 1 et R(3, 0) = 1 
+  - La relation n'est pas transitive: R(0, 3) = 1 et R(3, 0) = 1, pourtant R(0, 2) = 0 
+  - La relation est semi-transitive
+  - La relation est négativement transitive
+  - La relation est ferrer
+  - La relation est complète
 <br>
 Ordres :
-La relation n'est pas un ordre total<br>
-La relation n'est pas un ordre partiel<br>
-La relation n'est pas un préordre partiel<br>
-La relation n'est pas un préordre total<br>
-La relation est un semi-ordre<br>
-La relation est un ordre d'intervalle<br>
+  - La relation n'est pas un ordre total
+  - La relation n'est pas un ordre partiel
+  - La relation n'est pas un préordre partiel
+  - La relation n'est pas un préordre total
+  - La relation est un semi-ordre
+  - La relation est un ordre d'intervalle
 <br>
 L'ordre total le plus proche de la relation donnée est :
 [1, 1, 0, 0, 0]<br>
